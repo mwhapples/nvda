@@ -16,7 +16,7 @@ from gui.message import isModalMessageBoxActive
 @dataclass
 class _Context:
 	blockActionIf: Callable[[], bool]
-	messageString: str
+	translatedMessage: str
 
 
 class Context(_Context, Enum):
@@ -50,7 +50,7 @@ def when(*contexts: Context):
 		def funcWrapper(*args, **kwargs):
 			for context in contexts:
 				if context.blockActionIf():
-					ui.message(context.messageString)
+					ui.message(context.translatedMessage)
 					return
 			return func(*args, **kwargs)
 		return funcWrapper
