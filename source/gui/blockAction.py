@@ -29,13 +29,13 @@ class Context(_Context, Enum):
 		lambda: config.isAppX,
 		# Translators: Reported when an action cannot be performed because NVDA has been installed
 		# from the Windows Store.
-		_("Action unavailable in Windows Store version"),
+		_("Action unavailable in NVDA Windows Store version"),
 	)
 	MODAL_DIALOG_OPEN = (
 		isModalMessageBoxActive,
 		# Translators: Reported when an action cannot be performed because NVDA is waiting
 		# for a response from a modal dialog
-		_("Action unavailable while dialog response required"),
+		_("Action unavailable as an open dialog requires a response"),
 	)
 
 
