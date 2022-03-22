@@ -44,8 +44,7 @@ def when(*contexts: Context):
 	A function decorated with `when` will exit early if any supplied context in `contexts` is active.
 
 	For example, a function decorated with `@blockAction.when(blockAction.Context.SECURE_MODE)`
-	will return without running in secure mode
-	if secure mode is active.
+	will return without running if secure mode is active.
 	"""
 	def _wrap(func):
 		@wraps(func)
