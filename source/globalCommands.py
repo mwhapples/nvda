@@ -2315,8 +2315,6 @@ class GlobalCommands(ScriptableObject):
 	)
 	@gui.blockAction.when(gui.blockAction.Context.SECURE_MODE)
 	def script_openUserConfigurationDirectory(self, gesture):
-		if globalVars.appArgs.secure:
-			return
 		import systemUtils
 		systemUtils.openUserConfigurationDirectory()
 
