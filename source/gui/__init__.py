@@ -25,7 +25,6 @@ import queueHandler
 import core
 from . import guiHelper
 from .message import (
-	isModalMessageBoxActive,
 	# messageBox is accessed through `gui.messageBox` as opposed to `gui.message.messageBox` throughout NVDA,
 	# be cautious when removing
 	messageBox,
